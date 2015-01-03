@@ -1,0 +1,21 @@
+<template name="layout">
+<header>
+	<div class="main_page">
+        <h1>
+        	<a href="/">Indie-Gift</a>
+        </h1>
+    </div>
+</header>
+<div class="main_page single-col">
+	<section class="main-col">
+		<section class="col1">
+			{{> yield}}
+		</section>
+		<section class="col2">
+			{{> rightSide}}
+		</section>
+	</section>
+
+	{{> footer}}
+</div>
+</template>

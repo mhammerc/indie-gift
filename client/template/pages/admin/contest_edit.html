@@ -1,0 +1,22 @@
+<template name="EditContest">
+<aside class="info-concours">
+	<h2>Modifier un concours</h2>
+</aside>
+<article class="admin center box">
+	<p>
+	{{# autoForm collection="Contests" id=contest._id doc=contest type="update"}}
+
+
+		{{> afQuickField name='name'}}
+		{{> afQuickField name='shortName'}}
+		{{> afQuickField name='description' rows=6}}
+		{{> afQuickField name='note' rows=2}}
+		{{> afQuickField name='twitter'}}
+		{{> afQuickField name='imageLink'}}
+		{{> afQuickField name='endDate' type='date'}}
+
+	<button type="submit">Modifier</button>
+	{{/autoForm}}
+	</p>
+</article>
+</template>

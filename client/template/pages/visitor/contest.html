@@ -1,0 +1,36 @@
+<template name="Contest">
+<aside class="info-concours">
+	<h2>Concours : {{contest.name}}</h2>
+	<p><i class="fa fa-calendar-o"></i> Le concours se finit dans <span class="kkcountdown" data-time="{{contestLeftTime}}"></span></p>
+	<a><i class="fa fa-gift"></i> {{contest.note}}</a>
+</aside>
+<article>
+	<img src="{{contest.imageLink}}" alt="{{contest.name}}" />
+	<p>
+	{{contest.description}}
+	<br />
+	Bonne chance à tous ! :)
+	</p>
+	{{#if isContestActive }}
+		{{#if hasRegisteredToContest}}
+			<p class="valided"><shake><i class="fa fa-check"></i> Inscription validée !</shake></p>
+		{{else}}
+			<p><a href="" class="open" id="registerToContest"><i class="fa fa-arrow-right"></i> Inscriptions ouvertes ! <i class="fa fa-arrow-left"></i></a><span class="mini-text center">(Via Twitter)</span></p>
+		{{/if}}
+	{{else}}
+		<p class="close"><i class="fa fa-times"></i> Inscriptions fermées !</p>
+	{{/if}}
+</article>
+<aside class="how-play">
+	<h3>Comment participer ?</h3>
+	<p>
+	Indie-Gift est un site qui établit des concours régulièrement et qui vous permet de gagner des jeux.
+	L'utilisation du site est bien évidemment gratuite. Nous recevons nos clés directement de sponsors ou
+	de développeurs ou encore d'éditeurs. Pour vous inscrire aux concours, il vous suffit de cliquer sur le
+	bouton "S'inscrire" qui postera automatiquement un message sur Twitter validant votre participation.
+	</p>
+	<div class="youtube">
+		<iframe src="//www.youtube.com/embed/fAj-dnMWqko" frameborder="0" allowfullscreen></iframe>
+	</div>
+</aside>
+</template>

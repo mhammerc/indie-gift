@@ -1,0 +1,34 @@
+<template name="AdminPanel">
+<aside class="info-concours">
+	<h2>Administration</h2>
+</aside>
+<article class="admin">
+	<aside class="how-play">
+		<h3>Concours principal - {{mainContest.name}}</h3>
+	</aside>
+	<p>
+	<br />1. <a href='' class='switch-inscriptions' id='{{mainContest._id}}'>Switcher l'accès aux inscriptions</a> <span class='red'>(Actuellement : {{#if mainContest.isActive}}ON{{else}}OFF{{/if}})</span><br />
+	2. <a href='' class='delete-all-registrations' id='{{mainContest._id}}'>Réinitialiser les inscriptions</a> <span class='red'>(Actuellement {{mainContest.totalRegistrations}} inscriptions)</span><br />
+	3. <a href="{{pathFor 'EditContest' id=mainContest._id}}">Modifier le concours</a><br />
+	</p>
+	
+	<aside class="how-play">
+		<h3>Autres concours</h3>
+	</aside>
+	<p class="center"><a href="{{pathFor 'CreateContest'}}"><strong>Créer un concours</strong></a></p>
+	{{#unless contests}}
+	<h3>Aucun autre concours pour le moment</h3>
+	{{else}}
+	{{#each contests}}
+	<h2>{{name}}</h2>
+	<p><br />
+	1. <a href='' class='switch-inscriptions' id='{{_id}}'>Switcher l'accès aux inscriptions</a> <span class='red'>(Actuellement : {{#if isActive}}ON{{else}}OFF{{/if}})</span><br />
+	2. <a href='' class='delete-all-registrations' id='{{_id}}'>Réinitialiser les inscriptions</a> <span class='red'>(Actuellement {{totalRegistrations}} inscriptions)</span><br />
+	3. <a href="{{pathFor 'EditContest' id=_id}}">Modifier le concours</a><br />
+	4. <a href='' class='make-main-contest' id='{{_id}}'>Placer en première page</a><br />
+	5. <a href='' class='delete-contest' id='{{_id}}'>Supprimer le concours</a><br />
+	</p>
+	{{/each}}
+	{{/unless}}
+</article>
+</template>

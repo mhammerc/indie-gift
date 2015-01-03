@@ -1,0 +1,1199 @@
+h1,
+h2,
+h3,
+h4,
+body,
+header,
+section,
+footer,
+article,
+nav,
+ul,
+li,
+a,
+p,
+img
+{
+    margin: 0;
+    padding: 0;
+
+    outline: 0;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+
+    word-wrap: break-word;
+
+    background: url('img/background.png') fixed, rgb(220, 220, 220);
+}
+a
+{
+    text-decoration: none;
+
+    color: rgb(250, 250, 250);
+}
+h4
+{
+    text-align: center;
+}
+.mini-text
+{
+    font-size: 9px;
+
+    clear: both;
+
+    text-align: center;
+}
+.red
+{
+    color:red;
+}
+@-webkit-keyframes spaceboots
+{
+    0%
+    {
+        -webkit-transform: translate(2px, 1px) rotate(0deg);
+                transform: translate(2px, 1px) rotate(0deg);
+    }
+    10%
+    {
+        -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+                transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20%
+    {
+        -webkit-transform: translate(-3px, 0px) rotate(1deg);
+                transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30%
+    {
+        -webkit-transform: translate(0px, 2px) rotate(0deg);
+                transform: translate(0px, 2px) rotate(0deg);
+    }
+    40%
+    {
+        -webkit-transform: translate(1px, -1px) rotate(1deg);
+                transform: translate(1px, -1px) rotate(1deg);
+    }
+    50%
+    {
+        -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+                transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60%
+    {
+        -webkit-transform: translate(-3px, 1px) rotate(0deg);
+                transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70%
+    {
+        -webkit-transform: translate(2px, 1px) rotate(-1deg);
+                transform: translate(2px, 1px) rotate(-1deg);
+    }
+    80%
+    {
+        -webkit-transform: translate(-1px, -1px) rotate(1deg);
+                transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90%
+    {
+        -webkit-transform: translate(2px, 2px) rotate(0deg);
+                transform: translate(2px, 2px) rotate(0deg);
+    }
+    100%
+    {
+        -webkit-transform: translate(1px, -2px) rotate(-1deg);
+                transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+@keyframes spaceboots
+{
+    0%
+    {
+        -webkit-transform: translate(2px, 1px) rotate(0deg);
+                transform: translate(2px, 1px) rotate(0deg);
+    }
+    10%
+    {
+        -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+                transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20%
+    {
+        -webkit-transform: translate(-3px, 0px) rotate(1deg);
+                transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30%
+    {
+        -webkit-transform: translate(0px, 2px) rotate(0deg);
+                transform: translate(0px, 2px) rotate(0deg);
+    }
+    40%
+    {
+        -webkit-transform: translate(1px, -1px) rotate(1deg);
+                transform: translate(1px, -1px) rotate(1deg);
+    }
+    50%
+    {
+        -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+                transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60%
+    {
+        -webkit-transform: translate(-3px, 1px) rotate(0deg);
+                transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70%
+    {
+        -webkit-transform: translate(2px, 1px) rotate(-1deg);
+                transform: translate(2px, 1px) rotate(-1deg);
+    }
+    80%
+    {
+        -webkit-transform: translate(-1px, -1px) rotate(1deg);
+                transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90%
+    {
+        -webkit-transform: translate(2px, 2px) rotate(0deg);
+                transform: translate(2px, 2px) rotate(0deg);
+    }
+    100%
+    {
+        -webkit-transform: translate(1px, -2px) rotate(-1deg);
+                transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+a:hover,
+shake:hover,
+em:hover,
+h2:hover,
+h1:hover
+{
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-animation-name: spaceboots;
+            animation-name: spaceboots;
+    -webkit-animation-duration: .8s;
+            animation-duration: .8s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+input,
+textarea
+{
+    margin: 5px 10px;
+    padding: 5px 10px;
+
+    transition: .5s;
+
+    color: rgb(100, 100, 100);
+    border: 2px solid rgb(150, 150, 150);
+    border-radius: 2px;
+    background: rgb(250, 250, 250);
+}
+textarea
+{
+    font-family: 'Open Sans', sans-serif;
+
+    display: block;
+}
+input:hover,
+textarea:hover
+{
+    border: 2px solid rgb(65, 165, 225);
+}
+input:focus,
+textarea:focus
+{
+    color: rgb(250, 250, 250);
+    border: 2px solid rgb(35, 135, 195);
+    background: rgb(65, 165, 225);
+}
+form
+{
+    display: inline-block;
+}
+
+.box
+{
+    padding: 10px;
+
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 2px;
+}
+
+.main_page
+{
+    width: 1200px;
+    margin: 0 auto;
+}
+header
+{
+    z-index: 100;
+
+    max-height: 69px;
+
+    background: rgba(250, 250, 250, .8);
+    box-shadow: 0 5px rgb(65, 165, 225) inset;
+}
+header h1
+{
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    background-color: rgb(65, 165, 225);
+}
+header nav
+{
+    display: inline-block;
+    float: right;
+}
+header li
+{
+    display: inline-block;
+
+    margin-top: 5px;
+    padding: 16.4px 0;
+
+    background-color: rgb(153, 51, 51);
+    box-shadow: 0 2px rgb(153, 51, 51) inset;
+}
+header li.stackable
+{
+    margin-right: -4px;
+
+    border-right: 1px solid rgb(153, 51, 51);
+}
+header li a
+{
+    padding: 17px 20px;
+
+    transition: .3s;
+
+    color: rgb(0, 0, 0);
+}
+header li a:hover
+{
+    color: rgb(250, 250, 250);
+}
+.single-col
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    background-color: rgb(80, 80, 80);
+    box-shadow: 0 0 10px rgb(200, 200, 200);
+}
+.single-col-main
+{
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0 0 10px rgb(200, 200, 200);
+}
+.main-col
+{
+    box-sizing: border-box;
+    min-height: 600px;
+}
+.col1
+{
+    position: relative;
+
+    float: left;
+
+    box-sizing: border-box;
+    width: 66.66666666666666%;
+    min-height: 1200px;
+
+    background-color: rgb(250, 250, 250);
+}
+.col1 aside
+{
+    text-align: center;
+
+    color: rgb(250, 250, 250);
+}
+.info-concours h2
+{
+    font-size: 2em;
+
+    padding: 5px 0;
+
+    background: rgb(70, 70, 70);
+}
+.info-concours p
+{
+    padding: 5px 0;
+
+    color: rgb(15, 115, 175);
+    background: rgb(80, 180, 245);
+}
+.info-concours span
+{
+    font-weight: bold;
+}
+.info-concours a
+{
+    display: block;
+
+    padding: 10px 0;
+
+    background: rgb(35, 135, 195);
+}
+.info-concours a i
+{
+    font-size: 1.3em;
+}
+.info-page
+{
+    font-size: 1.3em;
+
+    margin-bottom: 30px;
+    padding: 8px 0;
+
+    text-align: center;
+
+    color: rgb(250, 250, 250);
+    background: rgb(70, 70, 70);
+}
+.how-play h3
+{
+    margin-top: 20px;
+    padding: 5px 0;
+
+    color: rgb(100, 100, 100);
+    background: rgb(190, 190, 190);
+}
+.how-play p
+{
+    margin: 20px 20px;
+
+    color: rgb(110, 110, 110);
+}
+.youtube
+{
+    height: 315px;
+    margin-bottom: 20px;
+}
+
+.center
+{
+    margin: auto;
+
+    text-align: center;
+
+    display: block;
+}
+
+iframe
+{
+    width: 560px;
+    height: 315px;
+}
+article
+{
+    min-height: 400px;
+    margin: 20px;
+
+    color: rgb(120, 120, 120);
+}
+article h1
+{
+    font-size: 2em;
+
+    text-align: center;
+}
+article h2
+{
+    display: block;
+
+    text-align: center;
+
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+article h3,
+article a.block
+{
+    display: block;
+
+    padding: 10px 0;
+
+    text-align: center;
+}
+article h3
+{
+    padding-top: 35px;
+}
+article a
+{
+    color: rgb(45, 145, 205);
+}
+article p
+{
+    margin-bottom: 10px;
+}
+article p::first-letter
+{
+    font-size: 1.3em;
+
+    margin-left: 30px;
+}
+article img
+{
+    display: block;
+
+    max-width: 100%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+article .open,
+article .valided,
+article .close
+{
+    font-size: 2em;
+
+    display: block;
+
+    margin: 5px -20px;
+    padding: 10px 0;
+
+    text-align: center;
+
+    color: rgb(250, 250, 250);
+}
+article .open
+{
+    transition: .4s;
+
+    background: rgb(65, 165, 225);
+}
+article .open:hover
+{
+    background: rgb(85, 185, 245);
+}
+article .valided
+{
+    background: rgb(80, 183, 54);
+}
+article .close
+{
+    background: rgb(252, 78, 42);
+}
+article .thanks
+{
+    color: rgb(252, 78, 42);
+}
+article .admin
+{
+    border-left: 5px solid rgb(150, 150, 150);
+}
+article .underscore
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid rgb(150, 150, 150);
+}
+article .email
+{
+    font-size: 2em;
+
+    display: block;
+
+    margin: 5px -20px;
+    padding: 10px 0;
+
+    text-align: center;
+
+    color: rgb(150, 150, 150);
+}
+article .email::first-letter
+{
+    font-size: 1em;
+
+    margin-left: 0;
+}
+article .warning
+{
+    display: block;
+
+    margin: 5px -20px;
+    padding: 10px 0;
+
+    text-align: center;
+
+    color: rgb(250, 250, 250);
+    background: rgb(252, 78, 42);
+}
+article .cgu
+{
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    border-left: 5px solid rgb(150, 150, 150);
+}
+.col2
+{
+    position: relative;
+
+    float: right;
+
+    box-sizing: border-box;
+    width: 33.33333333333333%;
+    min-height: 600px;
+
+    color: rgb(250, 250, 250);
+    background-color: rgb(80, 80, 80);
+}
+.col2 h2
+{
+    margin: 8px 0;
+
+    text-align: center;
+
+    background: rgb(60, 60, 60);
+}
+.user
+{
+    position: absolute;
+
+    width: 100%;
+
+    background: rgb(85, 185, 255);
+}
+.user a,
+.user p
+{
+    transition: .5s;
+    text-align: center;
+}
+.login
+{
+    font-size: 1.4em;
+
+    position: relative;
+
+    display: inline-block;
+    float: left;
+
+    width: 100%;
+    padding: 10px 0;
+
+    color: rgb(40, 143, 14);
+    background: rgb(90, 193, 64);
+}
+.login:hover
+{
+    color: rgb(50, 153, 24);
+    background: rgb(100, 203, 74);
+}
+.avatar
+{
+    float: left;
+
+    margin: 0 0 0 0;
+    margin-left: 2px;
+    padding: 0 0 0 0;
+
+    border-radius: 3px;
+}
+.inscrip
+{
+    font-size: 1.4em;
+
+    position: relative;
+
+    display: inline-block;
+    float: left;
+
+    width: 41%;
+    padding: 10px 0;
+
+    color: rgb(100, 203, 74);
+    background: rgb(60, 163, 34);
+}
+.inscrip:hover
+{
+    color: rgb(90, 193, 64);
+    background: rgb(50, 153, 24);
+}
+.connected
+{
+    position: relative;
+
+    display: inline-block;
+    float: left;
+
+    width: 70%;
+    padding: 10px 0;
+
+    background: rgb(65, 165, 225);
+}
+.compte
+{
+    font-size: 1.6em;
+
+    position: relative;
+
+    display: inline-block;
+    float: left;
+
+    width: 10%;
+    padding: 3.4px 0;
+
+    color: rgb(35, 135, 195);
+    background: rgb(85, 185, 255);
+}
+.compte:hover
+{
+    color: rgb(45, 145, 205);
+    background: rgb(95, 195, 255);
+}
+.deco
+{
+    position: relative;
+
+    display: inline-block;
+    float: right;
+
+    width: 30%;
+    padding: 10px 0;
+
+    color: rgb(85, 185, 245);
+    background: rgb(35, 135, 195);
+}
+.deco:hover
+{
+    color: rgb(75, 175, 225);
+    background: rgb(25, 125, 185);
+}
+.info-user
+{
+    font-size: .9em;
+
+    display: block;
+    clear: both;
+
+    padding: 3px 0;
+
+    color: rgb(220, 220, 220);
+    background: rgb(57, 102, 129);
+}
+.info-user span
+{
+    font-size: 1.2em;
+
+    color: rgb(250, 250, 250);
+}
+.stats
+{
+    margin-top: 20px;
+    padding-bottom: 10px;
+
+    background: rgb(100, 100, 100);
+}
+.stats p
+{
+    font-size: .9em;
+
+    margin: 5px 5px;
+
+    color: rgb(200, 200, 200);
+}
+.stats i
+{
+    font-size: 1.2em;
+
+    color: rgb(250, 250, 250);
+}
+.stats span
+{
+    font-size: 1.2em;
+
+    color: rgb(85, 185, 255);
+}
+.coeur
+{
+    margin-top: 125px;
+    padding-bottom: 10px;
+
+    background: rgb(100, 100, 100);
+}
+.coeur p
+{
+    font-size: .9em;
+
+    margin: 5px 5px;
+
+    text-align: center;
+
+    color: rgb(200, 200, 200);
+}
+.coeur i
+{
+    font-size: 10em;
+
+    -webkit-animation-name: coeur-unhover;
+            animation-name: coeur-unhover;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+
+    color: rgb(255,0,0);
+}
+@-webkit-keyframes coeur-unhover
+{
+    0%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    25%
+    {
+        -webkit-transform: rotate(-15deg);
+                transform: rotate(-15deg);
+    }
+    50%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    75%
+    {
+        -webkit-transform: rotate(15deg);
+                transform: rotate(15deg);
+    }
+    100%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+@keyframes coeur-unhover
+{
+    0%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    25%
+    {
+        -webkit-transform: rotate(-15deg);
+                transform: rotate(-15deg);
+    }
+    50%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    75%
+    {
+        -webkit-transform: rotate(15deg);
+                transform: rotate(15deg);
+    }
+    100%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+.coeur i:hover
+{
+    -webkit-animation-name: coeur-hover;
+            animation-name: coeur-hover;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+
+    color: #f35400;
+}
+@-webkit-keyframes coeur-hover
+{
+    0%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    25%
+    {
+        -webkit-transform: rotate(-5deg);
+                transform: rotate(-5deg);
+    }
+    50%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    75%
+    {
+        -webkit-transform: rotate(5deg);
+                transform: rotate(5deg);
+    }
+    100%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+@keyframes coeur-hover
+{
+    0%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    25%
+    {
+        -webkit-transform: rotate(-5deg);
+                transform: rotate(-5deg);
+    }
+    50%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    75%
+    {
+        -webkit-transform: rotate(5deg);
+                transform: rotate(5deg);
+    }
+    100%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+.coeur-clicked
+{
+    -webkit-animation-name: coeur-clicked-;
+            animation-name: coeur-clicked-;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+
+    color: #f35400;
+}
+@-webkit-keyframes coeur-clicked-
+{
+    0%
+    {
+        -webkit-transform: scale(1);
+    }
+    25%
+    {
+        -webkit-transform: scale(1.5);
+    }
+    50%
+    {
+        -webkit-transform: scale(1);
+    }
+    75%
+    {
+        -webkit-transform: scale(.5);
+    }
+    100%
+    {
+        -webkit-transform: scale(1);
+    }
+}
+.coeur span
+{
+    font-size: 1.2em;
+
+    color: rgb(85, 185, 255);
+}
+.coeur em
+{
+    font-size: 1.3em;
+
+    color: rgb(250,0,0);
+}
+.social
+{
+    margin-top: 30px;
+    padding-bottom: 4px;
+
+    text-align: center;
+
+    background: rgb(100, 100, 100);
+}
+.social a
+{
+    font-size: 1.8em;
+
+    margin: 0 10px;
+
+    transition: .3s;
+
+    color: rgb(200, 200, 200);
+}
+.social a:hover
+{
+    color: rgb(250, 250, 250);
+}
+.partners
+{
+    margin-top: 30px;
+    padding-bottom: 10px;
+
+    background: rgb(70, 70, 70);
+}
+.partners img
+{
+    width: 100%;
+}
+
+footer
+{
+    font-size: .9em;
+
+    clear: both;
+
+    color: rgb(100, 100, 100);
+    background-color: rgb(180, 180, 180);
+}
+.logo
+{
+    position: relative;
+    top: -40px;
+    left: -50px;
+
+    width: 100px;
+    height: 100px;
+
+    -webkit-transform: rotate(-20deg);
+       -moz-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+         -o-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+
+    background: url('img/logo_small.png') no-repeat top left;
+    background-size: cover;
+}
+footer .announce
+{
+    margin-top: -100px;
+    margin-left: 30px;
+    padding: 10px 20px;
+}
+footer span
+{
+    float: right;
+}
+footer a
+{
+    transition: .3s;
+
+    color: rgb(120, 120, 120);
+}
+footer a:hover
+{
+    color: rgb(70, 70, 70);
+}
+footer .credit
+{
+    font-size: .85em;
+
+    padding: 1px 0;
+
+    text-align: center;
+    /*#################################*\
+   #  TO ACTIVATE THE LABEL DESIGNER,  #
+   #  DELETE THE CSS "display: none;"  #
+   \*#################################*/
+    /* display: none; */
+
+    background: rgb(150, 150, 150);
+}
+
+.admin p::first-letter
+{
+    font-size: 1em;
+
+    margin-left: 0;
+}
+
+.form_large_inputText
+{
+    width: 100%;
+}
+.form_large_inputTextArea
+{
+    width: 120%;
+    height: 250px;
+}
+
+/*#################################*\
+   #  RESPONSIVE MODE AFTER THIS !!!  #
+   \*#################################*/
+
+
+
+@media screen and (max-width: 1244px)
+{
+    .main_page
+    {
+        width: 922px;
+    }
+    .user
+    {
+        font-size: .9em;
+    }
+    .login
+    {
+        width: 100%;
+    }
+    .inscrip,
+    .compte,
+    .deco
+    {
+        width: 100%;
+    }
+    .inscrip
+    {
+        width: 50%;
+    }
+    .connected
+    {
+        display: block;
+
+        width: 100%;
+    }
+    .stats
+    {
+        margin-top: 20px;
+    }
+    .stats p
+    {
+        font-size: .75em;
+    }
+
+    footer p
+    {
+        font-size: .9em;
+    }
+}
+
+@media screen and (max-width: 955px)
+{
+    .main_page
+    {
+        width: 650px;
+    }
+    .col1,
+    .col2
+    {
+        display: block;
+
+        width: 100%;
+    }
+    .stats p
+    {
+        font-size: 1em;
+    }
+    footer span,
+    footer p
+    {
+        display: block;
+        float: none;
+
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 680px)
+{
+    .main_page
+    {
+        width: 100%;
+        max-width: 650px;
+    }
+    header h1
+    {
+        display: block;
+
+        text-align: center;
+    }
+    header nav
+    {
+        display: block;
+        float: none;
+    }
+    header li
+    {
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+
+        text-align: center;
+    }
+    header li a
+    {
+        font-size: .9em;
+
+        padding: 0;
+    }
+    header li.stackable
+    {
+        margin-right: 0;
+
+        border-right: 0 solid rgb(45, 145, 205);
+    }
+    /*
+.single-col{
+   margin-top: 150px;
+}*/
+
+    iframe
+    {
+        width: 100%;
+        height: 90%;
+    }
+
+    article .open,
+    article .valided,
+    article .close
+    {
+        font-size: 1.4em;
+    }
+    article .email
+    {
+        font-size: 1.4em;
+    }
+
+    .stats p
+    {
+        font-size: .8em;
+    }
+
+    footer span
+    {
+        margin-top: 10px;
+    }
+}
