@@ -4,6 +4,7 @@ var contestRegistrationProcess = function (contest)
 	Meteor.call('registerUserToContest', contest._id);
 }
 
+
 Template.Contest.helpers(
 {
 	contest: function ()
