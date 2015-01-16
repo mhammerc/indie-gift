@@ -63,6 +63,22 @@ Meteor.methods(
 	},
 	deleteContest: function (id)
 	{
+		if (!isGranted())
+			return;
+
 		Contests.remove(id);
+	},
+	resetHearts: function ()
+	{
+		if (!isGranted())
+			return;
+
+		Hearts.update(getHearts()._id,
+		{
+			$set:
+			{
+				number: 0
+			}
+		});
 	}
 });

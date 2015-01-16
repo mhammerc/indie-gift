@@ -15,6 +15,10 @@ Template.AdminPanel.events(
 	'click .delete-contest': function (e)
 	{
 		Meteor.call('deleteContest', e.target.id);
+	},
+	'click #resetHearts': function ()
+	{
+		Meteor.call('resetHearts');
 	}
 });
 
