@@ -1,21 +1,16 @@
-var contestRegistrationProcess = function (contest)
-{
+var contestRegistrationProcess = function (contest) {
 	Meteor.call('makeNewTweet', contest.twitter);
 	Meteor.call('registerUserToContest', contest._id);
 }
 
 
-Template.Contest.helpers(
-{
-	contest: function ()
-	{
+Template.Contest.helpers({
+	contest: function () {
 		return this;
 	},
-	hasRegisteredToContest: function ()
-	{
+	hasRegisteredToContest: function () {
 		contest = this;
-		registration = Registrations.findOne(
-		{
+		registration = Registrations.findOne({
 			contest_id: contest._id
 		});
 
@@ -23,44 +18,40 @@ Template.Contest.helpers(
 			return false;
 		return true;
 	},
-	isContestActive: function ()
-	{
+	isContestActive: function () {
 		return this.isActive;
 	},
-	contestLeftTime: function ()
-	{
+	contestLeftTime: function () {
 		return this.endDate.valueOf() / 1000; //This is needed beacause valueOf() return timestamp in ms. We want timestamp in seconds.
 	}
 });
 
-Template.Contest.events(
-{
-	'click #registerToContest': function ()
-	{
-		if (!Meteor.user())
-		{
-			Meteor.loginWithTwitter(
-			{
+Template.Contest.events({
+	'click #registerToContest': function () {
+
+		var context = this;
+
+		if (!Meteor.user()) {
+
+			Meteor.loginWithTwitter({
 				requestPermissions: ['basic'] // currently not supported
-			}, function (error)
-			{
+			}, function (error) {
+
 				if (error)
 					console.log(error);
 				else
-					contestRegistrationProcess(this);
+					contestRegistrationProcess(context);
 			});
 		}
 		else
-			contestRegistrationProcess(this);
+			contestRegistrationProcess(context);
 	}
 });
 
-Template.Contest.rendered = function ()
-{
+Template.Contest.rendered = function () {
 	Meteor.call('incrementTotalPageView');
 
-	$(".kkcountdown").kkcountdown(
-	{
+	$(".kkcountdown").kkcountdown({
 		dayText: ' jour ',
 		daysText: ' jours ',
 		hoursText: ' heures ',
@@ -71,3 +62,4 @@ Template.Contest.rendered = function ()
 	});
 
 };
+
