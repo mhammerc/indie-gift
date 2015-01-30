@@ -29,3 +29,4 @@ if (Contests.find().count() === 0)
 
 	Roles.createRole('admin');
 }
+

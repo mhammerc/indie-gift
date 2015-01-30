@@ -1,18 +1,4 @@
-h1,
-h2,
-h3,
-h4,
-body,
-header,
-section,
-footer,
-article,
-nav,
-ul,
-li,
-a,
-p,
-img {
+h1, h2, h3, h4, body, header, section, footer, article, nav, ul, li, a, p, img {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -20,7 +6,7 @@ img {
 body {
     font-family: 'Open Sans', sans-serif;
     word-wrap: break-word;
-    background: url('img/background.png') fixed, rgb(220, 220, 220);
+    background: url('img/background.png'), rgb(220, 220, 220);
 }
 a {
     text-decoration: none;
@@ -129,11 +115,7 @@ h4 {
         transform: translate(1px, -2px) rotate(-1deg);
     }
 }
-a:hover,
-shake:hover,
-em:hover,
-h2:hover,
-h1:hover {
+a:hover, shake:hover, em:hover, h2:hover, h1:hover {
     -webkit-transform-origin: 50% 50%;
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
@@ -146,8 +128,7 @@ h1:hover {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 }
-input,
-textarea {
+input, textarea {
     margin: 5px 10px;
     padding: 5px 10px;
     transition: .5s;
@@ -160,12 +141,10 @@ textarea {
     font-family: 'Open Sans', sans-serif;
     display: block;
 }
-input:hover,
-textarea:hover {
+input:hover, textarea:hover {
     border: 2px solid rgb(65, 165, 225);
 }
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
     color: rgb(250, 250, 250);
     border: 2px solid rgb(35, 135, 195);
     background: rgb(65, 165, 225);
@@ -310,8 +289,7 @@ article h2 {
     text-align: center;
     border-bottom: 1px solid rgb(170, 170, 170);
 }
-article h3,
-article a.block {
+article h3, article a.block {
     display: block;
     padding: 10px 0;
     text-align: center;
@@ -336,9 +314,7 @@ article img {
     margin-top: 15px;
     margin-bottom: 15px;
 }
-article .open,
-article .valided,
-article .close {
+article .open, article .valided, article .close {
     font-size: 2em;
     display: block;
     margin: 5px -20px;
@@ -415,8 +391,7 @@ article .cgu {
     width: 100%;
     background: rgb(85, 185, 255);
 }
-.user a,
-.user p {
+.user a, .user p {
     transition: .5s;
     text-align: center;
 }
@@ -533,7 +508,7 @@ article .cgu {
     text-align: center;
     color: rgb(200, 200, 200);
 }
-.coeur i {
+#fa-coeur {
     font-size: 10em;
     -webkit-animation-name: coeur-unhover;
     animation-name: coeur-unhover;
@@ -591,7 +566,7 @@ article .cgu {
         transform: rotate(0deg);
     }
 }
-.coeur i:hover {
+#fa-coeur:hover {
     -webkit-animation-name: coeur-hover;
     animation-name: coeur-hover;
     -webkit-animation-duration: 1s;
@@ -648,35 +623,8 @@ article .cgu {
         transform: rotate(0deg);
     }
 }
-.coeur-clicked {
-    -webkit-animation-name: coeur-clicked-;
-    animation-name: coeur-clicked-;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-play-state: running;
-    animation-play-state: running;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    color: #f35400;
-}
-@-webkit-keyframes coeur-clicked- {
-    0% {
-        -webkit-transform: scale(1);
-    }
-    25% {
-        -webkit-transform: scale(1.5);
-    }
-    50% {
-        -webkit-transform: scale(1);
-    }
-    75% {
-        -webkit-transform: scale(.5);
-    }
-    100% {
-        -webkit-transform: scale(1);
-    }
+i {
+    animation-name: coeur-hover!important;
 }
 .coeur span {
     font-size: 1.2em;
@@ -781,9 +729,7 @@ footer .credit {
     .login {
         width: 100%;
     }
-    .inscrip,
-    .compte,
-    .deco {
+    .inscrip, .compte, .deco {
         width: 100%;
     }
     .inscrip {
@@ -807,16 +753,14 @@ footer .credit {
     .main_page {
         width: 650px;
     }
-    .col1,
-    .col2 {
+    .col1, .col2 {
         display: block;
         width: 100%;
     }
     .stats p {
         font-size: 1em;
     }
-    footer span,
-    footer p {
+    footer span, footer p {
         display: block;
         float: none;
         text-align: center;
@@ -858,9 +802,7 @@ footer .credit {
         width: 100%;
         height: 90%;
     }
-    article .open,
-    article .valided,
-    article .close {
+    article .open, article .valided, article .close {
         font-size: 1.4em;
     }
     article .email {
@@ -873,3 +815,4 @@ footer .credit {
         margin-top: 10px;
     }
 }
+

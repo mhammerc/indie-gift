@@ -1,47 +1,58 @@
 <template name="rightSide">
-<div class="user">
-    {{#unless currentUser}}
-        <a class="login">Connexion</a>
-    {{else}}
-        <p class="connected">Bonjour {{ currentUser.profile.name }} !</p>
-        <a class="deco">Déconnexion</a>
-        {{#unless hasUserAlreadyParticipated }}
-            <p class="info-user">Vous n'avez participé à aucun concours.</p>
-        {{else}}
-            <p class="info-user">Vous avez participé à <span>{{userTotalParticipations}}</span> concours.</p>
+    <div class="user">
+        {{#unless currentUser}}
+            <a class="login">Connexion</a>
+            {{else}}
+                <p class="connected">Bonjour {{ currentUser.profile.name }} !</p>
+                <a class="deco">Déconnexion</a>
+                {{#unless hasUserAlreadyParticipated }}
+                    <p class="info-user">Vous n'avez participé à aucun concours.</p>
+                    {{else}}
+                        <p class="info-user">Vous avez participé à <span>{{userTotalParticipations}}</span> concours.</p>
+                {{/unless}}
+                {{# if isInRole 'admin'}}
+                    <p class="info-user"><a href="{{pathFor 'AdminPanel'}}">Administration</a>
+                    </p>
+                    {{/if}}
         {{/unless}}
-        {{# if isInRole 'admin'}}
-            <p class="info-user"><a href="{{pathFor 'AdminPanel'}}">Administration</a></p>
-        {{/if}}
-    {{/unless}}
-</div>
+    </div>
 
-<div class="coeur">
-<h2>Tu nous laisse un coeur ?</h2>
-<p>Clique pour laisser un coeur !</p>
-<p><a href=""><i class="fa fa-heart" id="fa-coeur"></i></a></p>
-<p><span>{{cpm}}</span> coeurs/min !</p>
-<p>Ton record : <span>{{cpmRecord}}</span> coeurs/min !</p>
-<p>Vous nous avez donné <em>{{getNumberOfHearts}}</em> coeurs. <span><shake>Merci !</shake></span></p>
-</div>
+    <div class="coeur">
+        <h2>Tu nous laisse un coeur ?</h2>
+        <p>Clique pour laisser un coeur !</p>
+        <p><a href=""><i class="fa fa-heart" id="fa-coeur"></i></a>
+        </p>
+        <p><span>{{cpm}}</span> coeurs/min !</p>
+        <p>Ton record : <span>{{cpmRecord}}</span> coeurs/min !</p>
+        <p>Vous nous avez donné <em>{{getNumberOfHearts}}</em> coeurs. <span><shake>Merci !</shake></span>
+        </p>
+    </div>
 
-<div class="stats">
-    <h2>Stats</h2>
-    <p><i class="fa fa-users"></i> Nombre de participants au concours actuel : <span>{{contest.totalRegistrations}}</span></p>
-    <p><i class="fa fa-ticket"></i> Nombre de participations totales : <span>{{stats.totalRegistrations}}</span></p>
-    <p><i class="fa fa-globe"></i> Nombre d'affichages de cette page : <span>{{stats.totalPageView}}</span></p>
-    <p><i class="fa fa-key"></i> Nombre de clés distribuées : <span>{{stats.numberOfKeys}}</span></p>
-    <p><i class="fa fa-gamepad"></i> Nombre de jeux différents mis en concours : <span>{{stats.numberOfGames}}</span></p>
-</div>
-<div class="social">
-    <h2>Nous suivre</h2>
-    <a target="_blank" class="twitter" href="https://twitter.com/IndieGift"><i class="fa fa-twitter"></i></a>
-    <a target="_blank" class="facebook" href="https://www.facebook.com/indiegift"><i class="fa fa-facebook"></i></a>
-</div>
-<div class="partners">
-    <h2>Les partenaires</h2>
-    <a target="_blank" href="http://languagecraft.tv/"><img src="/img/partenaire_lc.png" alt="Language Craft" /></a>
-    <a target="_blank" href="http://pulseheberg.com/"><img src="/img/pulse_partener.jpg" alt="PulseHeberg"/></a>
-    <a target="_blank" href="http://www.steam-games.eu/"><img src="/img/partenaire_bann_sm.jpg" alt="Steam-Games"/></a>
-</div>
+    <div class="stats">
+        <h2>Stats</h2>
+        <p><i class="fa fa-users"></i> Nombre de participants au concours actuel : <span>{{contest.totalRegistrations}}</span>
+        </p>
+        <p><i class="fa fa-ticket"></i> Nombre de participations totales : <span>{{stats.totalRegistrations}}</span>
+        </p>
+        <p><i class="fa fa-globe"></i> Nombre d'affichages de cette page : <span>{{stats.totalPageView}}</span>
+        </p>
+        <p><i class="fa fa-key"></i> Nombre de clés distribuées : <span>{{stats.numberOfKeys}}</span>
+        </p>
+        <p><i class="fa fa-gamepad"></i> Nombre de jeux différents mis en concours : <span>{{stats.numberOfGames}}</span>
+        </p>
+    </div>
+    <div class="social">
+        <h2>Nous suivre</h2>
+        <a target="_blank" class="twitter" href="https://twitter.com/IndieGift"><i class="fa fa-twitter"></i></a>
+        <a target="_blank" class="facebook" href="https://www.facebook.com/indiegift"><i class="fa fa-facebook"></i></a>
+    </div>
+    <div class="partners">
+        <h2>Les partenaires</h2>
+        <a target="_blank" href="http://languagecraft.tv/"><img src="/img/partenaire_lc.png" alt="Language Craft" />
+        </a>
+        <a target="_blank" href="http://pulseheberg.com/"><img src="/img/pulse_partener.jpg" alt="PulseHeberg" />
+        </a>
+        <a target="_blank" href="http://www.steam-games.eu/"><img src="/img/partenaire_bann_sm.jpg" alt="Steam-Games" />
+        </a>
+    </div>
 </template>
